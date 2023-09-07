@@ -1,0 +1,9 @@
+movl   −8(%rbp), %eax
+leal  	7(%rax), %edx
+testl 	%eax, %eax
+cmovs  %edx, %eax
+sarl  	$3, %eax
+movl   −8(%rbp), %edx
+sall  	$2, %edx
+addl 	%edx, %eax
+movl   %eax, −4(%rbp)
